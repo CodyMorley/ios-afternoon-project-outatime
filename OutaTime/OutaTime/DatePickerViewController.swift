@@ -15,10 +15,17 @@ class DatePickerViewController: UIViewController {
     
     var delegate: DatePickerDelegate?
     
+    
+    
+    
+    
     @IBAction func cancel(_ sender: UIBarButtonItem) {
+        dismiss(animated: true, completion: nil)
     }
     
     @IBAction func done(_ sender: UIBarButtonItem) {
+        delegate?.destinationWasChosen(datePicker.date)
+        dismiss(animated: true, completion: nil)
     }
     
     override func viewDidLoad() {
