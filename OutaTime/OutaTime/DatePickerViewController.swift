@@ -15,7 +15,6 @@ class DatePickerViewController: UIViewController {
     
     var delegate: DatePickerDelegate?
     
-    
     @IBAction func cancel(_ sender: UIBarButtonItem) {
     }
     
@@ -39,4 +38,8 @@ class DatePickerViewController: UIViewController {
     }
     */
 
+}
+
+protocol DatePickerDelegate {
+    func destinationWasChosen(_ date: Date)
 }
