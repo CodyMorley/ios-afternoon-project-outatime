@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6e6-mB-KWo">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
@@ -20,6 +20,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q6g-Po-TWY">
+                                <rect key="frame" x="128" y="757" width="167" height="30"/>
+                                <state key="normal" title="SET DESTINATION TIME"/>
+                                <connections>
+                                    <segue destination="1gz-dX-4Fj" kind="show" customClass="ModalDestinationDatePickerSegue" id="QA3-QP-B8t"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y9h-Da-UjL">
+                                <rect key="frame" x="158" y="812" width="98" height="30"/>
+                                <state key="normal" title="TRAVEL BACK"/>
+                                <connections>
+                                    <action selector="travelBack:" destination="6e6-mB-KWo" eventType="touchUpInside" id="Mst-0Z-NpE"/>
+                                </connections>
+                            </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="hrS-Ce-m6w">
                                 <rect key="frame" x="0.0" y="44" width="414" height="578"/>
                                 <subviews>
@@ -73,20 +87,6 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q6g-Po-TWY">
-                                <rect key="frame" x="128" y="757" width="167" height="30"/>
-                                <state key="normal" title="SET DESTINATION TIME"/>
-                                <connections>
-                                    <segue destination="1gz-dX-4Fj" kind="show" customClass="ModalDestinationDatePickerSegue" id="QA3-QP-B8t"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y9h-Da-UjL">
-                                <rect key="frame" x="158" y="812" width="98" height="30"/>
-                                <state key="normal" title="TRAVEL BACK"/>
-                                <connections>
-                                    <action selector="travelBack:" destination="6e6-mB-KWo" eventType="touchUpInside" id="Mst-0Z-NpE"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                         <constraints>
