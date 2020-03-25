@@ -13,7 +13,7 @@ class DatePickerViewController: UIViewController {
     
     @IBOutlet weak var datePicker: UIDatePicker!
     
-    
+    var delegate: DatePickerDelegate?
     
     
     @IBAction func cancel(_ sender: UIBarButtonItem) {
