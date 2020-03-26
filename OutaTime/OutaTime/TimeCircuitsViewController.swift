@@ -92,6 +92,7 @@ class TimeCircuitsViewController: UIViewController {
 extension TimeCircuitsViewController: DatePickerDelegate {
     func destinationWasChosen(_ date: Date) {
         destinationTextView.text = dateFormatter.string(from: date)
+        print(dateFormatter.string(from: date))
     }
     
     
