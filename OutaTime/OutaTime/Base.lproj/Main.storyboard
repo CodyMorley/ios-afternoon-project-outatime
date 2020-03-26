@@ -20,11 +20,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q6g-Po-TWY">
-                                <rect key="frame" x="128" y="757" width="167" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q6g-Po-TWY">
+                                <rect key="frame" x="123.5" y="757" width="167" height="30"/>
                                 <state key="normal" title="SET DESTINATION TIME"/>
                                 <connections>
-                                    <segue destination="1gz-dX-4Fj" kind="show" customClass="ModalDestinationDatePickerSegue" id="QA3-QP-B8t"/>
+                                    <segue destination="1gz-dX-4Fj" kind="show" identifier="ModalDestinationDatePickerSegue" id="QA3-QP-B8t"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y9h-Da-UjL">
@@ -91,6 +91,7 @@
                         <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="hrS-Ce-m6w" firstAttribute="leading" secondItem="mqA-eh-MXp" secondAttribute="leading" id="GQq-ho-IjR"/>
+                            <constraint firstItem="q6g-Po-TWY" firstAttribute="centerX" secondItem="mqA-eh-MXp" secondAttribute="centerX" id="Gb9-45-541"/>
                             <constraint firstItem="mqA-eh-MXp" firstAttribute="trailing" secondItem="hrS-Ce-m6w" secondAttribute="trailing" id="KUM-eg-Ro6"/>
                             <constraint firstItem="Y9h-Da-UjL" firstAttribute="centerX" secondItem="mqA-eh-MXp" secondAttribute="centerX" id="U9t-tk-7Tm"/>
                             <constraint firstItem="Y9h-Da-UjL" firstAttribute="top" secondItem="q6g-Po-TWY" secondAttribute="bottom" constant="25" id="aCc-vQ-2bV"/>

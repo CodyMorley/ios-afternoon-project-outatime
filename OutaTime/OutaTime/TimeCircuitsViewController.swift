@@ -25,6 +25,7 @@ class TimeCircuitsViewController: UIViewController {
     
     var currentSpeed: Int = 0
     
+    var timer: Timer?
     
     
     
@@ -42,9 +43,36 @@ class TimeCircuitsViewController: UIViewController {
     }
     
     func startTimer() {
-        
+        timer = Timer.scheduledTimer(withTimeInterval: 0.01, repeats: true, block: updateSpeed(timer: ))
     }
 
+    func resetTimer() {
+        timer?.invalidate()
+        timer = nil
+        }
+    
+    func updateSpeed(timer: Timer) {
+    
+        if currentSpeed < 88 {
+            currentSpeed += 1
+            speedTextView.text = "\(currentSpeed) MPH"
+        } else {
+            resetTimer()
+            lastTimeTextView.text = presentTextView.text
+            presentTextView.text = destinationTextView.text
+            currentSpeed = 0
+            
+        }
+    }
+    
+    func showAlert() {
+        let alert = UIAlertController(title: "Time Travel Successful", message: "Your new date is: \(presentTextView.text ?? "not found")", preferredStyle: .alert)
+        
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alert.addAction(okAction)
+        
+        present(alert, animated: true)
+    }
     
     // MARK: - Navigation
 
