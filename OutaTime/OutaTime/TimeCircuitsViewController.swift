@@ -18,8 +18,8 @@ class TimeCircuitsViewController: UIViewController {
     
      var dateFormatter: DateFormatter = {
          let formatter = DateFormatter()
-         formatter.dateFormat = "MMMM dd, YYYY"
-         formatter.timeZone = TimeZone(secondsFromGMT: 28800)
+         formatter.dateFormat = "MMM dd YYYY"
+         formatter.timeZone = TimeZone(secondsFromGMT: 0)
          return formatter
      }()
     
@@ -61,7 +61,7 @@ class TimeCircuitsViewController: UIViewController {
             lastTimeTextView.text = presentTextView.text
             presentTextView.text = destinationTextView.text
             currentSpeed = 0
-            
+            showAlert()
         }
     }
     
